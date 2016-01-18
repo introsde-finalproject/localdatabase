@@ -10,10 +10,7 @@ import javax.xml.ws.Endpoint;
 public class ServiceStandalone {
     public static void main(String[] args) throws IllegalArgumentException, IOException, URISyntaxException{
         String PROTOCOL = "http://";
-        String HOSTNAME = InetAddress.getLocalHost().getHostAddress();
-        if (HOSTNAME.equals("127.0.0.1")) {
-            HOSTNAME = "localhost";
-        }
+        String HOSTNAME = "0.0.0.0";
         String PORT = "7003";
         String BASE_URL = "/soap/localdatabase";
         

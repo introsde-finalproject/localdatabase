@@ -42,8 +42,7 @@
     </target>
 
     <target name="compile" depends="clean, init">
-        <javac srcdir="${src.dir}" destdir="${build.dir}" classpathref="classpath.id" includeAntRuntime="false">
-        </javac>
+        <javac srcdir="${src.dir}" destdir="${build.dir}" classpathref="classpath.id" includeAntRuntime="false"/>
         <copy todir="${build.dir}" overwrite="true">
             <fileset dir="${webcontent.dir}">
                 <include name="*.xml" />
@@ -53,7 +52,6 @@
     </target>
 
     <target name="start" depends="compile">
-        <java classname="introsde.finalproject.localdatabase.ServiceStandalone" classpath="${build.dir}" classpathref="classpath.id" fork="true">
-        </java>
+        <java classname="introsde.finalproject.localdatabase.ServiceStandalone" classpath="${build.dir}" classpathref="classpath.id" fork="true"/>
     </target>
 </project>
